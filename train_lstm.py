@@ -10,3 +10,5 @@ from sklearn.model_selection import train_test_split
 
 bodyswing_df  = pd.read_csv("SWING.txt")
 handswing_df  = pd.read_csv("HANDSWING.txt")
+
+no_of_timesteps = 10
