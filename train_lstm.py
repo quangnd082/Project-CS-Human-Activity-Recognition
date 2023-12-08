@@ -27,12 +27,25 @@ for i in range(no_of_timesteps, n_sample):
     y.append(0)
 
 
+dataset = bodyswing_df.iloc[:,1:].values
+n_sample = len(dataset)
+for i in range(no_of_timesteps, n_sample):
+    X.append(dataset[i-no_of_timesteps:i,:])
+    y.append(1)
+
+dataset = handswing_df.iloc[:,1:].values
+n_sample = len(dataset)
+for i in range(no_of_timesteps, n_sample):
+    X.append(dataset[i-no_of_timesteps:i,:])
+    y.append(0)
+
 X, y = np.array(X), np.array(y)
 print(X.shape, y.shape)
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 # 132 = 4 * 33
 # 10 = no_of_number
+
 model  = Sequential()
 model.add(LSTM(units = 50, return_sequences = True, input_shape = (X.shape[1], X.shape[2])))
 model.add(Dropout(0.2))
