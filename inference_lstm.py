@@ -30,7 +30,7 @@ def draw_landmark_on_image(mpDraw, results, img):
     mpDraw.draw_landmarks(img, results.pose_landmarks, mpPose.POSE_CONNECTIONS)
     for id, lm in enumerate(results.pose_landmarks.landmark):
         h, w, c = img.shape
-        # print(id, lm)
+        print(id, lm)
         cx, cy = int(lm.x * w), int(lm.y * h)
         cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)
     return img
@@ -57,13 +57,18 @@ def detect(model, lm_list):
     global label
     lm_list = np.array(lm_list)
     lm_list = np.expand_dims(lm_list, axis=0)
-    print(lm_list.shape)
-    results = model.predict(lm_list)
-    print(results)
-    if results[0][0] > 0.5:
+
+    y_hat = model.predict(img)
+    #results = np.argmax(y_hat)
+    print(y_hat)
+
+    if y_hat[0][0] > 0.5:
         label = "SWING BODY"
     else:
         label = "SWING HAND"
+    return label
+    # label_predict = ('body','hand','doze')
+    # label = label_predict[results]
     return label
 
 
