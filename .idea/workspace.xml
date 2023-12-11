@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1696d827-d7aa-4b7b-8cfd-abf4dac53b62" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/inference_lstm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inference_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/inference_lstm_multiclass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_lstm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

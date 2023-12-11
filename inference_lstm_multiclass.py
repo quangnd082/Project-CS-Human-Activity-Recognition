@@ -12,7 +12,7 @@ mpPose = mp.solutions.pose
 pose = mpPose.Pose()
 mpDraw = mp.solutions.drawing_utils
 
-model = tf.keras.models.load_model("model.h5")
+model = tf.keras.models.load_model("model_11.h5")
 
 cap = cv2.VideoCapture(0)
 
@@ -30,7 +30,7 @@ def draw_landmark_on_image(mpDraw, results, img):
     mpDraw.draw_landmarks(img, results.pose_landmarks, mpPose.POSE_CONNECTIONS)
     for id, lm in enumerate(results.pose_landmarks.landmark):
         h, w, c = img.shape
-        print(id, lm)
+        # print(id, lm)
         cx, cy = int(lm.x * w), int(lm.y * h)
         cv2.circle(img, (cx, cy), 5, (255, 0, 0), cv2.FILLED)
     return img
@@ -58,12 +58,14 @@ def detect(model, lm_list):
     lm_list = np.array(lm_list)
     lm_list = np.expand_dims(lm_list, axis=0)
     print(lm_list.shape)
-    results = model.predict(lm_list)
-    print(results)
-    if results[0][0] > 0.5:
-        label = "SWING BODY"
-    else:
-        label = "SWING HAND"
+
+    y_hat = model.predict(lm_list)
+    results = np.argmax(y_hat)
+    print(y_hat , results)
+
+
+    label_predict = ('body','hand','doze','love','clap')
+    label = label_predict[results]
     return label
 
 
@@ -85,9 +87,11 @@ while True:
             lm_list.append(c_lm)
             if len(lm_list) == n_time_steps:
                 # predict
-                t1 = threading.Thread(target=detect, args=(model, lm_list,))
+                t1 = threading.Thread(target=detect, args=(model, lm_list))
                 t1.start()
+                #t1 = detect(model,lm_list)
                 lm_list = []
+
 
             img = draw_landmark_on_image(mpDraw, results, img)
 
