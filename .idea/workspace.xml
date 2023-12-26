@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1696d827-d7aa-4b7b-8cfd-abf4dac53b62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/evaluate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CLAP.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/HANDSWING.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/LOVE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SWING.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference_lstm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inference_lstm_multiclass.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_case_1_binary.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_case_1_multiclass.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_lstm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DOZE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/DOZE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/LRCN_model_structure_plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Posedetector+tracker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ac1ea73f-72e2-4f25-b000-c7d9a015b4ae.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/angle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/flowchart.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pose_landmarks_index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pose_tracking_example.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pose_tracking_full_body_landmarks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/screenshot_1701767903.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/screenshot_1701768007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/warrier2_sketch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/DOZE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/train_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/train_lstm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

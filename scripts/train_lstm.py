@@ -131,7 +131,7 @@ early_stopping_callback = EarlyStopping(monitor = 'val_loss', patience = 10, mod
 # Nếu validation loss không giảm trong 10 epoch liên tiếp, huấn luyện sẽ dừng.
 model.compile(loss = 'categorical_crossentropy', optimizer = 'Adam', metrics = ["accuracy"])
 
-lstm_training_history = model.fit(x = X_train, y = y_train_onehot, epochs = 25, batch_size = 16,
+lstm_training_history = model.fit(x = X_train, y = y_train_onehot, epochs = 50, batch_size = 16,
                                                      shuffle = True, validation_split = 0.2,
                                                      callbacks = [early_stopping_callback])
 
