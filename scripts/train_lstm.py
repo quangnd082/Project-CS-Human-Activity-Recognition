@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from keras.callbacks import EarlyStopping
 
-from evaluate import plot_metric
 from keras.layers import LSTM, Dense, Dropout, BatchNormalization
 from keras.models import Sequential
 from keras.utils import to_categorical
@@ -114,9 +113,9 @@ n_features = X.shape[2]
 
 
 model = Sequential()
-model.add(LSTM(128, return_sequences=True, activation='relu', input_shape=(no_of_timesteps, n_features)))
+model.add(LSTM(64, return_sequences=True, activation='relu', input_shape=(no_of_timesteps, n_features)))
 model.add(Dropout(0.2))
-model.add(LSTM(256, return_sequences=True, activation='relu'))
+model.add(LSTM(128, return_sequences=True, activation='relu'))
 model.add(Dropout(0.2))
 model.add(LSTM(256, return_sequences=False, activation='relu'))
 model.add(BatchNormalization())
@@ -131,12 +130,10 @@ early_stopping_callback = EarlyStopping(monitor = 'val_loss', patience = 10, mod
 # Nếu validation loss không giảm trong 10 epoch liên tiếp, huấn luyện sẽ dừng.
 model.compile(loss = 'categorical_crossentropy', optimizer = 'Adam', metrics = ["accuracy"])
 
-lstm_training_history = model.fit(x = X_train, y = y_train_onehot, epochs = 50, batch_size = 16,
+lstm_training_history = model.fit(x = X_train, y = y_train_onehot, epochs = 50, batch_size = 32,
                                                      shuffle = True, validation_split = 0.2,
                                                      callbacks = [early_stopping_callback])
 
 
-plot_metric(lstm_training_history, 'loss', 'val_loss', 'Loss vs Validation Loss')
-plot_metric(lstm_training_history, 'accuracy', 'val_accuracy', 'Accuracy vs Validation Accuracy')
 
-model.save("model_16.h5")
+model.save("model_29.h5")
