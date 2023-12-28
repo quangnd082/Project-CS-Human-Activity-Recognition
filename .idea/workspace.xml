@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1696d827-d7aa-4b7b-8cfd-abf4dac53b62" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/latex/image/LRCN_model_structure_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/latex/image/LRCN_model_structure_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report + slide/HUS_Human_Activity_Recognition.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report + slide/HUS_Human_Activity_Recognition.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/train_lstm.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/train_lstm.py" afterDir="false" />
-    </list>
+    <list default="true" id="1696d827-d7aa-4b7b-8cfd-abf4dac53b62" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
